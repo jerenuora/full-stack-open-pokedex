@@ -37,5 +37,5 @@ jobs:
           heroku_app_name: "powerful-mesa-46660" 
           heroku_email: "jere.nuora@gmail.com"
           healthcheck: "https://powerful-mesa-46660.herokuapp.com/health"
-          checkstring: "not"
+          checkstring: "ok"
           rollbackonhealthcheckfailed: true

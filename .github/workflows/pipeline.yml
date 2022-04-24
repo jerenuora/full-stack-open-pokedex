@@ -36,3 +36,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "powerful-mesa-46660" 
           heroku_email: "jere.nuora@gmail.com"
+          healthcheck: "https://powerful-mesa-46660.herokuapp.com/health"
+          checkstring: "ok"

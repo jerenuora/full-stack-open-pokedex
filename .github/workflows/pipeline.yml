@@ -30,3 +30,9 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
          
+      - name: Heroku deploy
+        uses: akhileshns/heroku-deploy@v3.12.12 
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "powerful-mesa-46660" 
+          heroku_email: "jere.nuora@gmail.com"

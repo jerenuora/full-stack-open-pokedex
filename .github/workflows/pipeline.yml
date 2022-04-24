@@ -33,7 +33,6 @@ jobs:
       - name: Heroku deploy
         uses: akhileshns/heroku-deploy@v3.12.12 
         with:
-          command: start-prod
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "powerful-mesa-46660" 
           heroku_email: "jere.nuora@gmail.com"

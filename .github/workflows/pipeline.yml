@@ -33,6 +33,7 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
       - name: Heroku deploy
+        if: ${{ !contains(join(github.event.commits.*.message), '#skip' ) }}
         if: ${{ github.event_name == 'push' }}
         uses: akhileshns/heroku-deploy@v3.12.12 
         with:
@@ -50,6 +51,7 @@ jobs:
         with:
           fetch-depth: '0'
       - name: Bump version and push tag
+        if: ${{ !contains(join(github.event.commits.*.message), '#skip' ) }}
         if: ${{ github.event_name == 'push' }}
         uses: anothrNick/github-tag-action@1.36.0
         env:

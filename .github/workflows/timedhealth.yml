@@ -1,10 +1,9 @@
-on:
-  push:
-    branches:
-      - master
+name: Periodic health check
 
-  # schedule:
-  #   - cron:  '15 * * * *'
+
+on:
+  schedule:
+    - cron:  '15 * * * *'
 
 jobs:
   simple_deployment_pipeline:
@@ -14,4 +13,4 @@ jobs:
       - name: check health
         uses: jtalk/url-health-check-action@v2
         with:
-          url: "https://powerful-mesa-46660.herokuapp.com/health"
+          url: "https://powerful-mesa-46660.herokuapp.com/"

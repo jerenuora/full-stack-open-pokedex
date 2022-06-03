@@ -3,7 +3,7 @@ name: Periodic health check
 
 on:
   schedule:
-    - cron:  '15 * * * *'
+    - cron:  '* * * * *'
 
 jobs:
   simple_deployment_pipeline:

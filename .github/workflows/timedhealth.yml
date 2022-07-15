@@ -1,16 +1,16 @@
-name: Periodic health check
+#name: Periodic health check
 
 
-on:
-  schedule:
-    - cron:  '15 * * * *'
+#on:
+#  schedule:
+#    - cron:  '* * * * *'
 
-jobs:
-  simple_deployment_pipeline:
-    runs-on: ubuntu-20.04
-    steps:
+#jobs:
+#  simple_deployment_pipeline:
+#    runs-on: ubuntu-20.04
+#    steps:
 
-      - name: check health
-        uses: jtalk/url-health-check-action@v2
-        with:
-          url: "https://powerful-mesa-46660.herokuapp.com/"
+#      - name: check health
+#        uses: jtalk/url-health-check-action@v2
+#        with:
+#          url: "https://powerful-mesa-46660.herokuapp.com/"
